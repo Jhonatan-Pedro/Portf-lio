@@ -1,4 +1,4 @@
-# 💼 Portfólio - Jhonatan Pedro
+# Portfólio | Jhonatan Pedro
 
 Este projeto se trata do meu portfólio pessoal desenvolvido com o objetivo de apresentar minhas habilidades, projetos e evolução na área de desenvolvimento front-end.
 
@@ -6,9 +6,9 @@ A proposta do portfólio é transmitir uma identidade moderna e profissional, de
 
 ---
 
-##  🌐 Acesse o Portfólio
+##  🌐 Acesse o Portfólio 👇
 
-**Deploy:** 👉 [`https://jhonatan-pedro.github.io/Portf-lio/`](https://jhonatan-pedro.github.io/Portf-lio/)
+**Deploy:** [`https://jhonatan-pedro.github.io/Portf-lio/`](https://jhonatan-pedro.github.io/Portf-lio/)
 
 ---
 
