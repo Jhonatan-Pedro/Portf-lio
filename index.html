@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jhonatan Pedro | Desenvolvedor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+       // ===== EMAILJS INTEGRATION =====
+        (function(){ emailjs.init({ publicKey: "Uf9fQEzsRnhJhqGgI" }); })();
+    </script>
+<base target="_blank">
+</head>
+<body>
+    <!-- Navigation -->
+    <header id="mainHeader" class="header">
+        <nav class="navbar">
+            <a href="#hero" class="logo" data-lenis-ignore>
+                <span class="logo-first">JHONATAN</span><span class="logo-last">PEDRO</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link">SOBRE</a></li>
+                <li><a href="#work" class="nav-link">PROJETOS</a></li>
+                <li><a href="#services" class="nav-link">SERVIÇOS</a></li>
+                <li><a href="#experience" class="nav-link">EXPERIÊNCIA</a></li>
+                <li><a href="#contact" class="nav-link">CONTATO</a></li>
+            </ul>
+            <a href="#contact" class="cta-btn" data-lenis-ignore>VAMOS CONVERSAR</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" data-lenis-ignore>
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Video Background -->
+    <section id="hero" class="hero">
+        <div class="hero-video-container">
+            <video class="hero-video" autoplay loop muted playsinline>
+                <source src="assets/img-videos/hero_otimizado.mp4" type="video/mp4">
+            </video>
+            <div class="hero-video-overlay"></div>
+        </div>
+
+        <div class="hero-content">
+            <p class="hero-label gsap-fade-up">DEVELOPER PORTFOLIO</p>
+            <div class="hero-title-container">
+                <h1 class="hero-title" id="heroTitle">
+                    <span class="title-text"></span>
+                    <span class="title-cursor"></span>
+                </h1>
+            </div>
+            <p class="hero-description gsap-fade-up">
+                Soluções digitais modernas, desenvolvidas com foco em qualidade e experiência do usuário.
+            </p>
+        </div>
+
+        <div class="scroll-indicator gsap-fade-up">
+            <span class="scroll-text">SCROLL TO EXPLORE</span>
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section - SEM BACKGROUND -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image-wrapper gsap-slide-right">
+                    <div class="about-image-container">
+                        <img src="assets/img-videos/foto-de-perfil.png" alt="Jhonatan Pedro" class="about-image">
+                        <div class="image-glow"></div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <div class="title-wrapper">
+                        <h1 class="section-title block-reveal-text">
+                            <span class="reveal-block"></span>
+                            <span class="reveal-text">Desenvolvendo <span class="highlight">Experiências Digitais</span></span>
+                        </h1>
+                    </div>
+                    <div class="about-text">
+                        <p class="reveal-text gsap-fade-up">Atuo como desenvolvedor front-end, criando interfaces modernas e funcionais com foco em usabilidade, desempenho e organização. Busco ir além do visual, desenvolvendo aplicações que ofereçam uma experiência fluida e bem estruturada.</p>
+                        <p class="reveal-text gsap-fade-up" data-delay="0.2">Acredito na evolução através da prática, transformando aprendizado em projetos reais e soluções cada vez mais bem construídas.</p>
+                    </div>
+
+                    <div class="about-stats gsap-fade-up" data-delay="0.3">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="1">0</span>
+                            <span class="stat-label">ANOS EXP.</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="9">0</span>
+                            <span class="stat-label">PROJETOS</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Botão de Download do Currículo - Minimalista Retangular -->
+                    <div class="cv-download-wrapper gsap-fade-up" data-delay="0.4">
+                        <a href="assets/img-videos/Currículo Atualizado.pdf" download class="cv-download-btn">
+                            BAIXAR CV
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+     <hr class="section-divider">
+
+        <!-- Work Section - COM BACKGROUND -->
+    <section id="work" class="work">
+        <div class="section-bg">
+            <img src="assets/img-videos/projetos.jpg" alt="" class="bg-image">
+            <div class="bg-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="work-header">
+                <div class="title-wrapper">
+                    <div class="work-label block-reveal-text">
+                        <span class="reveal-block"></span>
+                        <span class="reveal-text">PROJETOS EM DESTAQUE</span>
+                    </div>
+                </div>
+                <a href="https://github.com/Jhonatan-Pedro" target="_blank" class="view-github gsap-fade-left">
+                    <span class="view-github-text">VER MAIS NO GITHUB</span>
+                    <span class="view-github-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+            <div class="title-wrapper">
+                <h2 class="work-title block-reveal-text">
+                    <span class="reveal-block"></span>
+                    <span class="reveal-text">Soluções desenvolvidas na prática</span>
+                </h2>
+            </div>
+
+            <!-- CARROSSEL DE PROJETOS -->
+            <div class="projects-carousel">
+
+                <!-- ===== SLIDE 1 — Projetos 1, 2 e 3 ===== -->
+                <div class="projects-slide active" data-slide="1">
+                    <div class="projects-grid">
+
+                        <!-- Projeto 1 — Estático (HTML/CSS/JS) -->
+                        <div class="project-card featured gsap-fade-up">
+                            <div class="project-image-wrapper">
+                                <img src="assets/img-videos/ClynicFlex.png" alt="E-commerce Project" class="project-image">
+                                <div class="project-badge">DESTAQUE</div>
+                                <div class="project-overlay">
+                                    <div class="project-links">
+                                        <!-- Substitua o href pelo link do repositório no GitHub -->
+                                        <a href="https://github.com/Jhonatan-Pedro/ClynicFlex" target="_blank" class="project-link" title="Ver código no GitHub"><i class="fab fa-github"></i></a>
+                                        <!-- Substitua o href pelo link do GitHub Pages ou Netlify/Vercel do projeto -->
+                                        <a href="https://clincflex.onrender.com/" target="_blank" class="project-link demo-link" title="Ver Demo"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <div class="project-tags">
+                                    <span class="tag">REACT</span>
+                                    <span class="tag">TYPESCRIPT</span>
+                                    <span class="tag">NODE.JS</span>
+                                </div>
+                                <h3 class="project-name">ClynicFlex</h3>
+                                <p class="project-description">Sistema web desenvolvido para agendamento de consultas, permitindo organização de horários e melhor controle de atendimentos.</p>
+                            </div>
+                        </div>
+
+                        <!-- Projeto 2 — Estático (HTML/CSS/JS) -->
+                        <div class="project-card gsap-fade-up" data-delay="0.2">
+                            <div class="project-image-wrapper">
+                                <img src="assets/img-videos/Vila-do-Sabor.png" alt="Weather App" class="project-image">
+                                <div class="project-overlay">
+                                    <div class="project-links">
+                                        <!-- Substitua o href pelo link do repositório no GitHub -->
+                                        <a href="https://github.com/Jhonatan-Pedro/ViladoSabor-Project" target="_blank" class="project-link" title="Ver código no GitHub"><i class="fab fa-github"></i></a>
+                                        <!-- Substitua o href pelo link do GitHub Pages ou Netlify/Vercel do projeto -->
+                                        <a href="https://jhonatan-pedro.github.io/ViladoSabor-Project/" target="_blank" class="project-link demo-link" title="Ver Demo"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <div class="project-tags">
+                                    <span class="tag">HTML5</span>
+                                    <span class="tag">JavaScript</span>
+                                    <span class="tag">CSS</span>
+                                </div>
+                                <h3 class="project-name">Vila do Sabor</h3>
+                                <p class="project-description">Desenvolvimento de site institucional com foco em layout atrativo, organização de conteúdo e apresentação de produtos gastronômicos.</p>
+                            </div>
+                        </div>
+
+                        <!-- Projeto 3 — Estático (HTML/CSS/JS) -->
+                        <div class="project-card featured gsap-fade-up" data-delay="0.4">
+                            <div class="project-image-wrapper">
+                                <img src="assets/img-videos/Shotly.png" alt="Chat App" class="project-image">
+                                <div class="project-badge">DESTAQUE</div>
+                                <div class="project-overlay">
+                                    <div class="project-links">
+                                        <!-- Substitua o href pelo link do repositório no GitHub -->
+                                        <a href="https://github.com/Jhonatan-Pedro/Shotly" target="_blank" class="project-link" title="Ver código no GitHub"><i class="fab fa-github"></i></a>
+                                        <!-- Substitua o href pelo link do GitHub Pages ou Netlify/Vercel do projeto -->
+                                        <a href="https://jhonatan-pedro.github.io/Shotly/" target="_blank" class="project-link demo-link" title="Ver Demo"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <div class="project-tags">
+                                    <span class="tag">JavaScript</span>
+                                    <span class="tag">HTML5/CSS</span>
+                                    <span class="tag">GSAP</span>
+                                </div>
+                                <h3 class="project-name">Shotly</h3>
+                                <p class="project-description">Website para Agência de Fotografia, desenvolvido com foco em apresentação visual, responsividade e valorização do portfólio fotográfico.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div><!-- /slide 1 -->
+
+                <!-- ===== SLIDE 2 — Projetos 4, 5 e 6 ===== -->
+                <div class="projects-slide" data-slide="2">
+                    <div class="projects-grid">
+
+                        <!-- Projeto 4 — Estático (HTML/CSS/JS) -->
+                        <div class="project-card">
+                            <div class="project-image-wrapper">
+                                <!-- Substitua pela imagem do projeto -->
+                                <img src="assets/img-videos/Enigma-Decoder.png" alt="Project 4" class="project-image">
+                                <div class="project-overlay">
+                                    <div class="project-links">
+                                        <!-- Substitua o href pelo link do repositório no GitHub -->
+                                        <a href="https://github.com/Jhonatan-Pedro/Decodificador-Project" target="_blank" class="project-link" title="Ver código no GitHub"><i class="fab fa-github"></i></a>
+                                        <!-- Substitua o href pelo link do GitHub Pages ou Netlify/Vercel do projeto -->
+                                        <a href="https://jhonatan-pedro.github.io/Decodificador-Project/" target="_blank" class="project-link demo-link" title="Ver Demo"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <div class="project-tags">
+                                    <!-- Substitua pelas tecnologias usadas -->
+                                    <span class="tag">HTML</span>
+                                    <span class="tag">CSS</span>
+                                    <span class="tag">JavaScript</span>
+                                </div>
+                                <!-- Substitua pelo nome real do projeto -->
+                                <h3 class="project-name">Enigma Decoder</h3>
+                                <!-- Substitua pela descrição real do projeto -->
+                                <p class="project-description">Aplicação baseada na Cifra de César para codificação e decodificação de mensagens, desenvolvida no SENAC e posteriormente aprimorada com melhorias na interface e usabilidade.</p>
+                            </div>
+                        </div>
+
+                        <!-- Projeto 5 — Estático (HTML/CSS/JS) -->
+                        <div class="project-card">
+                            <div class="project-image-wrapper">
+                                <!-- Substitua pela imagem do projeto -->
+                                <img src="assets/img-videos/Stranger-Things.png" alt="Project 5" class="project-image">
+                                <div class="project-overlay">
+                                    <div class="project-links">
+                                        <!-- Substitua o href pelo link do repositório no GitHub -->
+                                        <a href="https://github.com/Jhonatan-Pedro/Stranger-Things" target="_blank" class="project-link" title="Ver código no GitHub"><i class="fab fa-github"></i></a>
+                                        <!-- Substitua o href pelo link do GitHub Pages ou Netlify/Vercel do projeto -->
+                                        <a href="https://jhonatan-pedro.github.io/Stranger-Things/" target="_blank" class="project-link demo-link" title="Ver Demo"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <div class="project-tags">
+                                    <!-- Substitua pelas tecnologias usadas -->
+                                    <span class="tag">HTML/CSS</span>
+                                    <span class="tag">GSAP</span>
+                                    <span class="tag">JavaScript</span>
+                                </div>
+                                <!-- Substitua pelo nome real do projeto -->
+                                <h3 class="project-name">Stranger Things</h3>
+                                <!-- Substitua pela descrição real do projeto -->
+                                <p class="project-description">Landing Page Temática desenvolvida durante uma semana intensiva de estudos em front-end, focado na criação de uma interface imersiva inspirada na série Stranger Things.</p>
+                            </div>
+                        </div>
+
+                        <!-- Projeto 6 — React + Vite + TypeScript (HOSPEDADO) -->
+                        <div class="project-card featured">
+                            <div class="project-image-wrapper">
+                                <!-- Substitua pela imagem/screenshot do projeto -->
+                                <img src="assets/img-videos/Bravium-NX.png" alt="React Project" class="project-image">
+                                <div class="project-badge">DESTAQUE</div>
+                                <div class="project-overlay">
+                                    <div class="project-links">
+                                        <!-- Substitua pelo link do repositório no GitHub -->
+                                        <a href="https://github.com/Jhonatan-Pedro/Bravium-NX" target="_blank" class="project-link" title="Ver código no GitHub"><i class="fab fa-github"></i></a>
+                                        <!-- ✅ ESTE PROJETO JÁ ESTÁ HOSPEDADO — substitua pelo link real -->
+                                        <a href="https://jhonatan-pedro.github.io/Bravium-NX/" target="_blank" class="project-link demo-link" title="Ver Demo ao vivo"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <div class="project-tags">
+                                    <span class="tag">HTML</span>
+                                    <span class="tag">CSS</span>
+                                    <span class="tag">GSAP</span>
+                                </div>
+                                <!-- Substitua pelo nome real do projeto -->
+                                <h3 class="project-name">Bravium NX</h3>
+                                <!-- Substitua pela descrição real do projeto -->
+                                <p class="project-description">Landing page moderna desenvolvida para apresentação de um notebook ecológico, com foco em design, conversão e experiência do usuário.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div><!-- /slide 2 -->
+
+            </div><!-- /projects-carousel -->
+
+            <!-- Navegação do Carrossel -->
+            <div class="carousel-nav">
+                <button class="carousel-btn carousel-prev" id="carouselPrev" disabled aria-label="Projetos anteriores">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <div class="carousel-indicators">
+                    <span class="carousel-dot active" data-dot="1"></span>
+                    <span class="carousel-dot" data-dot="2"></span>
+                </div>
+                <button class="carousel-btn carousel-next" id="carouselNext" aria-label="Próximos projetos">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+<hr class="section-divider">
+
+     <!-- Services Section - COM BACKGROUND -->
+    <section id="services" class="services">
+        <div class="section-bg">
+            <img src="assets/img-videos/servicos.png" alt="" class="bg-image">
+            <div class="bg-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="title-wrapper centered">
+                <h2 class="section-title block-reveal-text">
+                    <span class="reveal-block"></span>
+                    <span class="reveal-text">Áreas de <span class="highlight">Atuação</span></span>
+                </h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card gsap-fade-up">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="service-title">Desenvolvimento Front-end</h3>
+                    <p class="service-description">Criação de interfaces modernas, responsivas e funcionais, com foco em usabilidade e organização do código.</p>
+                </div>
+                <div class="service-card gsap-fade-up">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3 class="service-title">UI/UX e Design</h3>
+                    <p class="service-description">Desenvolvimento de layouts intuitivos e visualmente agradáveis, com foco na experiência do usuário e clareza na navegação.</p>
+                </div>
+                <div class="service-card gsap-fade-up">
+                    <div class="service-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="service-title">Performance</h3>
+                    <p class="service-description">Aplicação de boas práticas para melhorar o desempenho e garantir experiências rápidas e eficientes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Technologies Section - SEM BACKGROUND, COM BLOCOS ORGANIZADOS -->
+    <section id="technologies" class="technologies">
+        <div class="container">
+            <div class="title-wrapper centered">
+                <h3 class="tech-label block-reveal-text">
+                    <span class="reveal-block"></span>
+                    <span class="reveal-text">STACK TECNOLÓGICA</span>
+                </h3>
+            </div>
+
+            <div class="tech-categories">
+                <!-- Frontend -->
+                <div class="tech-category gsap-fade-up">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h4 class="category-title">Frontend</h4>
+                        <p class="category-desc">Interfaces modernas e responsivas</p>
+                    </div>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="tech-category gsap-fade-up" data-delay="0.2">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h4 class="category-title">Backend Base</h4>
+                        <p class="category-desc">Lógica e processamento de dados</p>
+                    </div>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-flask"></i>
+                            <span>Flask</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-database"></i>
+                            <span>SQL</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-code-branch"></i>
+                            <span>APIs REST</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Design -->
+                <div class="tech-category gsap-fade-up" data-delay="0.4">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h4 class="category-title">Design</h4>
+                        <p class="category-desc">Experiência visual</p>
+                    </div>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <i class="fab fa-figma"></i>
+                            <span>Figma</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Responsividade</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-paint-brush"></i>
+                            <span>Wix</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-pen-nib"></i>
+                            <span>Prototipagem</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <hr class="section-divider">
+
+    <!-- Experience Section - COM NAVEGAÇÃO HORIZONTAL -->
+    <section id="experience" class="experience">
+        <div class="section-bg">
+            <img src="assets/img-videos/jornada-profissional.jpg" alt="" class="bg-image">
+            <div class="bg-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="title-wrapper centered">
+                <h2 class="section-title block-reveal-text">
+                    <span class="reveal-block"></span>
+                    <span class="reveal-text">Jornada <span class="highlight">Profissional</span></span>
+                </h2>
+            </div>
+
+            <div class="timeline-horizontal-container">
+                <!-- Botão Anterior -->
+                <button class="timeline-nav-btn prev-btn" id="timelinePrevBtn" disabled>
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <!-- Container das Experiências -->
+                <div class="timeline-viewport">
+                    <div class="timeline-track" id="timelineTrack">
+                        
+                        <!-- Grupo 1: Experiências Atuais -->
+                        <div class="timeline-group active" data-group="1">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <span class="timeline-date">2024 • 2026 - Presente</span>
+                                    <h3 class="timeline-role">Formação em Análise e Desenvolvimento de Sistemas</h3>
+                                    <p class="timeline-company">UNICEPLAC</p>
+                                    <p class="timeline-description">Formação voltada ao desenvolvimento de software, abordando fundamentos como lógica de programação, estrutura de dados e construção de sistemas, preparando para atuação no mercado de tecnologia.</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <span class="timeline-date">2026 - Presente</span>
+                                    <h3 class="timeline-role">Desenvolvimento em Inglês</h3>
+                                    <p class="timeline-company">Centro Interescolar de Línguas (CIL)</p>
+                                    <p class="timeline-description">Estudo contínuo da língua inglesa com foco em aprimorar a leitura de documentações técnicas, comunicação e preparação para oportunidades na área de tecnologia em nível internacional.</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <span class="timeline-date">2025 • 2026</span>
+                                    <h3 class="timeline-role">Jovem Aprendiz em Desenvolvimento de Software</h3>
+                                    <p class="timeline-company">Experiência Profissional</p>
+                                    <p class="timeline-description">Atuação na área de desenvolvimento de software, com contato com rotinas do ambiente profissional, colaboração em equipe e aprendizado contínuo de tecnologias e processos de desenvolvimento.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Grupo 2: Experiências Anteriores -->
+                        <div class="timeline-group" data-group="2">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <span class="timeline-date">2026</span>
+                                    <h3 class="timeline-role">Projetos Pessoais</h3>
+                                    <p class="timeline-company">Portfólio</p>
+                                    <p class="timeline-description">Desenvolvimento contínuo de projetos pessoais para aprimorar habilidades técnicas e criar um portfólio diversificado.</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <span class="timeline-date">2025</span>
+                                    <h3 class="timeline-role">Desenvolvimento Web</h3>
+                                    <p class="timeline-company">SENAC</p>
+                                    <p class="timeline-description">Participação no desenvolvimento de projetos web voltados à criação de interfaces responsivas, com foco em boas práticas de desenvolvimento, organização de código e trabalho em equipe.</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Botão Próximo -->
+                <button class="timeline-nav-btn next-btn" id="timelineNextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <!-- Indicadores de Grupo -->
+            <div class="timeline-indicators">
+                <span class="indicator active" data-indicator="1"></span>
+                <span class="indicator" data-indicator="2"></span>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Contact Section - COM BACKGROUND -->
+    <section id="contact" class="contact">
+        <div class="section-bg contact-bg-enhanced">
+            <img src="assets/img-videos/contato.jpg" alt="" class="bg-image">
+            <div class="bg-overlay contact-overlay"></div>
+        </div>
+        <div class="contact-bg-text">CONTACT</div>
+        <div class="container">
+            <div class="contact-content">
+                <div class="title-wrapper">
+                    <h1 class="contact-title block-reveal-text">
+                        <span class="reveal-block"></span>
+                        <span class="reveal-text">
+                            GRANDE<br>
+                            <span class="highlight">VISÃO?</span><br>
+                            VAMOS EXECUTAR.
+                        </span>
+                    </h1>
+                </div>
+
+                <form class="contact-form gsap-fade-up" id="contactForm" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Meu nome é...">
+                            <span class="form-field-error" id="error-name">Por favor, insira seu nome.</span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Meu e-mail é...">
+                            <span class="form-field-error" id="error-email">Por favor, insira um e-mail válido.</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Eu estou interessado em...">
+                        <span class="form-field-error" id="error-subject">Por favor, insira um assunto.</span>
+                    </div>
+                    <button type="submit" class="submit-btn gsap-magnetic" id="submitBtn">
+                        <span id="submitBtnText">ENVIAR</span>
+                        <i class="fas fa-paper-plane" id="submitBtnIcon"></i>
+                    </button>
+                    <!-- Feedback global -->
+                    <p class="form-feedback form-feedback--success" id="formSuccess">
+                        <i class="fas fa-check-circle"></i> Mensagem recebida! Entrarei em contato assim que possível.
+                    </p>
+                    <p class="form-feedback form-feedback--error" id="formError">
+                        <i class="fas fa-exclamation-circle"></i> Algo deu errado. Tente novamente ou me contate pelo LinkedIn.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="copyright">© 2026 Jhonatan Pedro. Todos os direitos reservados.</p>
+                <div class="social-links">
+                    <a href="https://github.com/Jhonatan-Pedro" target="_blank" class="social-link gsap-magnetic"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/jhonatanpedroliradossantos/" target="_blank" class="social-link gsap-magnetic"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
