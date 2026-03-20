@@ -711,23 +711,3 @@ window.addEventListener('beforeunload', () => {
     lenis.destroy();
 });
 
-
-
-if (window.innerWidth <= 768) {
-    gsap.utils.toArray('.gsap-fade-up').forEach(el => {
-        const delay = parseFloat(el.getAttribute('data-delay')) || 0;
-
-        gsap.from(el, {
-            y: 30,
-            opacity: 0,
-            duration: 0.8,
-            delay: delay,
-            ease: 'power3.out',
-            scrollTrigger: {
-                trigger: el,
-                start: 'top 90%',
-                toggleActions: 'play none none none'
-            }
-        });
-    });
-}
