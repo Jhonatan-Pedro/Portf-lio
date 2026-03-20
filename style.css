@@ -2579,3 +2579,10 @@ html.lenis, html.lenis body {
     scrollbar-width: thin;
     scrollbar-color: var(--purple-primary) var(--bg-primary);
 }
+
+@media (max-width: 768px) {
+    .gsap-fade-up {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
