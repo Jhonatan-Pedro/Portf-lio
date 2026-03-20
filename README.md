@@ -8,7 +8,7 @@ A proposta do portfólio é transmitir uma identidade moderna e profissional, de
 
 ##  🌐 Acesse o Portfólio
 
-**Deploy:** 👉 [....](....)
+**Deploy:** 👉 [`https://jhonatan-pedro.github.io/Portf-lio/`](https://jhonatan-pedro.github.io/Portf-lio/)
 
 ---
 
