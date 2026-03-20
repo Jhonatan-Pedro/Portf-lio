@@ -56,7 +56,7 @@ Este portfólio tem como objetivo demonstrar minhas habilidades práticas no des
 
 ## 📫 Contato
 
-- LinkedIn: [`Meu LinkedIn`](https://www.linkedin.com/in/jhonatanpedroliradossantos/)
+- LinkedIn: [`https://www.linkedin.com/in/jhonatanpedroliradossantos/`](https://www.linkedin.com/in/jhonatanpedroliradossantos/)
 
 ---
 
