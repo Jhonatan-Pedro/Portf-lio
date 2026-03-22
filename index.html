@@ -23,6 +23,7 @@
         // ===== EMAILJS INTEGRATION =====
         (function () { emailjs.init({ publicKey: "Uf9fQEzsRnhJhqGgI" }); })();
     </script>
+    <base target="_blank">
 </head>
 
 <body>
@@ -48,16 +49,9 @@
 
     <!-- Hero Section with Video Background -->
     <section id="hero" class="hero">
-        <div class="hero-video-container">
-            <!-- Vídeo com fallback de carregamento -->
-            <video class="hero-video" autoplay loop muted playsinline preload="metadata"
-                poster="assets/img-videos/hero-poster-otimizado.png">
-
-                <!-- fallback caso vídeo não carregue -->
-                <source src="assets/img-videos/hero-otimizado.mp4" type="video/mp4">
-
-            </video>
-            <div class="hero-video-overlay"></div>
+        <div class="hero-bg-container">
+            <img class="hero-bg-image" src="assets/img-videos/hero-image-otimizada.webp" alt="Hero background">
+            <div class="hero-bg-overlay"></div>
         </div>
 
         <div class="hero-content">
@@ -128,7 +122,6 @@
             </div>
         </div>
     </section>
-
 
 
     <hr class="section-divider">

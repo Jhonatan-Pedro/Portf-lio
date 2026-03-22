@@ -711,3 +711,7 @@ window.addEventListener('beforeunload', () => {
     lenis.destroy();
 });
 
+ScrollTrigger.addEventListener("refresh", () => {
+    ScrollTrigger.update();
+});
+ScrollTrigger.refresh();
