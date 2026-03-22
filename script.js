@@ -227,7 +227,7 @@ gsap.fromTo('.about-content',
 );
 
 // Stagger nos elementos internos do conteúdo (título, texto, stats, botão)
-gsap.fromTo('.about-content > *',
+gsap.fromTo('.about-content > *: :not(.cv-download-wrapper)',
     {
         x: 30,
         opacity: 0
