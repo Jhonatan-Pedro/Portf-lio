@@ -518,8 +518,15 @@ hr.section-divider {
 /* Botão de Download CV */
 .cv-download-wrapper {
     margin-top: 2.5rem;
-    display: inline-block;
+    display: block !important;
     opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;   
+}
+
+.cv-download-wrapper .cv-download-btn {
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 .cv-download-btn {
