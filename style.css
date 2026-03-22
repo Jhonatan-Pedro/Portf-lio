@@ -519,6 +519,7 @@ hr.section-divider {
 .cv-download-wrapper {
     margin-top: 2.5rem;
     display: inline-block;
+    opacity: 1 !important;
 }
 
 .cv-download-btn {
