@@ -226,7 +226,7 @@ hr.section-divider {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(1.1);
+    filter: brightness(1.1) contrast(1.1);
 }
 
 .hero-video-overlay {
@@ -2580,3 +2580,33 @@ html.lenis, html.lenis body {
     scrollbar-color: var(--purple-primary) var(--bg-primary);
 }
 
+/* ===== FIX GLOBAL DE COR (ANTI BUG DE GPU / MOBILE) ===== */
+
+/* Garante cor sólida em textos críticos */
+.logo-last,
+.hero-label,
+.scroll-arrow i{
+    color: var(--purple-primary) !important;
+
+    /* melhora renderização em telas problemáticas */
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+/* ===== FIX MOBILE PARA TÍTULO DO HERO ===== */
+@media (max-width: 768px) {
+
+    .title-text {
+        /* remove gradiente problemático */
+        background: none !important;
+        -webkit-text-fill-color: unset !important;
+
+        /* força cor sólida */
+        color: #f3e8ff !important;
+
+        /* melhora renderização */
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+    }
+
+}

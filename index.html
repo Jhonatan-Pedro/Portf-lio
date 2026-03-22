@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -17,11 +20,11 @@
     <!-- EmailJS SDK -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
-       // ===== EMAILJS INTEGRATION =====
-        (function(){ emailjs.init({ publicKey: "Uf9fQEzsRnhJhqGgI" }); })();
+        // ===== EMAILJS INTEGRATION =====
+        (function () { emailjs.init({ publicKey: "Uf9fQEzsRnhJhqGgI" }); })();
     </script>
-<base target="_blank">
 </head>
+
 <body>
     <!-- Navigation -->
     <header id="mainHeader" class="header">
@@ -46,8 +49,13 @@
     <!-- Hero Section with Video Background -->
     <section id="hero" class="hero">
         <div class="hero-video-container">
-            <video class="hero-video" autoplay loop muted playsinline>
-                <source src="assets/img-videos/hero_otimizado.mp4" type="video/mp4">
+            <!-- Vídeo com fallback de carregamento -->
+            <video class="hero-video" autoplay loop muted playsinline preload="metadata"
+                poster="assets/img-videos/hero-poster-otimizado.png">
+
+                <!-- fallback caso vídeo não carregue -->
+                <source src="assets/img-videos/hero-otimizado.mp4" type="video/mp4">
+
             </video>
             <div class="hero-video-overlay"></div>
         </div>
@@ -87,12 +95,16 @@
                     <div class="title-wrapper">
                         <h1 class="section-title block-reveal-text">
                             <span class="reveal-block"></span>
-                            <span class="reveal-text">Desenvolvendo <span class="highlight">Experiências Digitais</span></span>
+                            <span class="reveal-text">Desenvolvendo <span class="highlight">Experiências
+                                    Digitais</span></span>
                         </h1>
                     </div>
                     <div class="about-text">
-                        <p class="reveal-text gsap-fade-up">Atuo como desenvolvedor front-end, criando interfaces modernas e funcionais com foco em usabilidade, desempenho e organização. Busco ir além do visual, desenvolvendo aplicações que ofereçam uma experiência fluida e bem estruturada.</p>
-                        <p class="reveal-text gsap-fade-up" data-delay="0.2">Acredito na evolução através da prática, transformando aprendizado em projetos reais e soluções cada vez mais bem construídas.</p>
+                        <p class="reveal-text gsap-fade-up">Atuo como desenvolvedor front-end, criando interfaces
+                            modernas e funcionais com foco em usabilidade, desempenho e organização. Busco ir além do
+                            visual, desenvolvendo aplicações que ofereçam uma experiência fluida e bem estruturada.</p>
+                        <p class="reveal-text gsap-fade-up" data-delay="0.2">Acredito na evolução através da prática,
+                            transformando aprendizado em projetos reais e soluções cada vez mais bem construídas.</p>
                     </div>
 
                     <div class="about-stats gsap-fade-up" data-delay="0.3">
@@ -105,7 +117,7 @@
                             <span class="stat-label">PROJETOS</span>
                         </div>
                     </div>
-                    
+
                     <!-- Botão de Download do Currículo - Minimalista Retangular -->
                     <div class="cv-download-wrapper gsap-fade-up" data-delay="0.4">
                         <a href="assets/img-videos/Currículo - JhonatanPedro.pdf" download class="cv-download-btn">
@@ -117,11 +129,11 @@
         </div>
     </section>
 
-    
 
-     <hr class="section-divider">
 
-        <!-- Work Section - COM BACKGROUND -->
+    <hr class="section-divider">
+
+    <!-- Work Section - COM BACKGROUND -->
     <section id="work" class="work">
         <div class="section-bg">
             <img src="assets/img-videos/projetos.jpg" alt="" class="bg-image">
@@ -157,14 +169,19 @@
                         <!-- Projeto 1 — Estático (HTML/CSS/JS) -->
                         <div class="project-card featured gsap-fade-up">
                             <div class="project-image-wrapper">
-                                <img src="assets/img-videos/ClynicFlex.png" alt="E-commerce Project" class="project-image">
+                                <img src="assets/img-videos/ClynicFlex.png" alt="E-commerce Project"
+                                    class="project-image">
                                 <div class="project-badge">DESTAQUE</div>
                                 <div class="project-overlay">
                                     <div class="project-links">
                                         <!-- Substitua o href pelo link do repositório no GitHub -->
-                                        <a href="https://github.com/Jhonatan-Pedro/ClynicFlex" target="_blank" class="project-link" title="Ver código no GitHub"><i class="fab fa-github"></i></a>
+                                        <a href="https://github.com/Jhonatan-Pedro/ClynicFlex" target="_blank"
+                                            class="project-link" title="Ver código no GitHub"><i
+                                                class="fab fa-github"></i></a>
                                         <!-- Substitua o href pelo link do GitHub Pages ou Netlify/Vercel do projeto -->
-                                        <a href="https://clincflex.onrender.com/" target="_blank" class="project-link demo-link" title="Ver Demo"><i class="fas fa-external-link-alt"></i></a>
+                                        <a href="https://clincflex.onrender.com/" target="_blank"
+                                            class="project-link demo-link" title="Ver Demo"><i
+                                                class="fas fa-external-link-alt"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -175,7 +192,8 @@
                                     <span class="tag">NODE.JS</span>
                                 </div>
                                 <h3 class="project-name">ClynicFlex</h3>
-                                <p class="project-description">Sistema web desenvolvido para agendamento de consultas, permitindo organização de horários e melhor controle de atendimentos.</p>
+                                <p class="project-description">Sistema web desenvolvido para agendamento de consultas,
+                                    permitindo organização de horários e melhor controle de atendimentos.</p>
                             </div>
                         </div>
 
@@ -186,9 +204,13 @@
                                 <div class="project-overlay">
                                     <div class="project-links">
                                         <!-- Substitua o href pelo link do repositório no GitHub -->
-                                        <a href="https://github.com/Jhonatan-Pedro/ViladoSabor-Project" target="_blank" class="project-link" title="Ver código no GitHub"><i class="fab fa-github"></i></a>
+                                        <a href="https://github.com/Jhonatan-Pedro/ViladoSabor-Project" target="_blank"
+                                            class="project-link" title="Ver código no GitHub"><i
+                                                class="fab fa-github"></i></a>
                                         <!-- Substitua o href pelo link do GitHub Pages ou Netlify/Vercel do projeto -->
-                                        <a href="https://jhonatan-pedro.github.io/ViladoSabor-Project/" target="_blank" class="project-link demo-link" title="Ver Demo"><i class="fas fa-external-link-alt"></i></a>
+                                        <a href="https://jhonatan-pedro.github.io/ViladoSabor-Project/" target="_blank"
+                                            class="project-link demo-link" title="Ver Demo"><i
+                                                class="fas fa-external-link-alt"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -199,7 +221,8 @@
                                     <span class="tag">CSS</span>
                                 </div>
                                 <h3 class="project-name">Vila do Sabor</h3>
-                                <p class="project-description">Desenvolvimento de site institucional com foco em layout atrativo, organização de conteúdo e apresentação de produtos gastronômicos.</p>
+                                <p class="project-description">Desenvolvimento de site institucional com foco em layout
+                                    atrativo, organização de conteúdo e apresentação de produtos gastronômicos.</p>
                             </div>
                         </div>
 
@@ -211,9 +234,13 @@
                                 <div class="project-overlay">
                                     <div class="project-links">
                                         <!-- Substitua o href pelo link do repositório no GitHub -->
-                                        <a href="https://github.com/Jhonatan-Pedro/Shotly" target="_blank" class="project-link" title="Ver código no GitHub"><i class="fab fa-github"></i></a>
+                                        <a href="https://github.com/Jhonatan-Pedro/Shotly" target="_blank"
+                                            class="project-link" title="Ver código no GitHub"><i
+                                                class="fab fa-github"></i></a>
                                         <!-- Substitua o href pelo link do GitHub Pages ou Netlify/Vercel do projeto -->
-                                        <a href="https://jhonatan-pedro.github.io/Shotly/" target="_blank" class="project-link demo-link" title="Ver Demo"><i class="fas fa-external-link-alt"></i></a>
+                                        <a href="https://jhonatan-pedro.github.io/Shotly/" target="_blank"
+                                            class="project-link demo-link" title="Ver Demo"><i
+                                                class="fas fa-external-link-alt"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -224,7 +251,8 @@
                                     <span class="tag">GSAP</span>
                                 </div>
                                 <h3 class="project-name">Shotly</h3>
-                                <p class="project-description">Website para Agência de Fotografia, desenvolvido com foco em apresentação visual, responsividade e valorização do portfólio fotográfico.</p>
+                                <p class="project-description">Website para Agência de Fotografia, desenvolvido com foco
+                                    em apresentação visual, responsividade e valorização do portfólio fotográfico.</p>
                             </div>
                         </div>
 
@@ -243,9 +271,13 @@
                                 <div class="project-overlay">
                                     <div class="project-links">
                                         <!-- Substitua o href pelo link do repositório no GitHub -->
-                                        <a href="https://github.com/Jhonatan-Pedro/Decodificador-Project" target="_blank" class="project-link" title="Ver código no GitHub"><i class="fab fa-github"></i></a>
+                                        <a href="https://github.com/Jhonatan-Pedro/Decodificador-Project"
+                                            target="_blank" class="project-link" title="Ver código no GitHub"><i
+                                                class="fab fa-github"></i></a>
                                         <!-- Substitua o href pelo link do GitHub Pages ou Netlify/Vercel do projeto -->
-                                        <a href="https://jhonatan-pedro.github.io/Decodificador-Project/" target="_blank" class="project-link demo-link" title="Ver Demo"><i class="fas fa-external-link-alt"></i></a>
+                                        <a href="https://jhonatan-pedro.github.io/Decodificador-Project/"
+                                            target="_blank" class="project-link demo-link" title="Ver Demo"><i
+                                                class="fas fa-external-link-alt"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -259,7 +291,9 @@
                                 <!-- Substitua pelo nome real do projeto -->
                                 <h3 class="project-name">Enigma Decoder</h3>
                                 <!-- Substitua pela descrição real do projeto -->
-                                <p class="project-description">Aplicação baseada na Cifra de César para codificação e decodificação de mensagens, desenvolvida no SENAC e posteriormente aprimorada com melhorias na interface e usabilidade.</p>
+                                <p class="project-description">Aplicação baseada na Cifra de César para codificação e
+                                    decodificação de mensagens, desenvolvida no SENAC e posteriormente aprimorada com
+                                    melhorias na interface e usabilidade.</p>
                             </div>
                         </div>
 
@@ -271,9 +305,13 @@
                                 <div class="project-overlay">
                                     <div class="project-links">
                                         <!-- Substitua o href pelo link do repositório no GitHub -->
-                                        <a href="https://github.com/Jhonatan-Pedro/Stranger-Things" target="_blank" class="project-link" title="Ver código no GitHub"><i class="fab fa-github"></i></a>
+                                        <a href="https://github.com/Jhonatan-Pedro/Stranger-Things" target="_blank"
+                                            class="project-link" title="Ver código no GitHub"><i
+                                                class="fab fa-github"></i></a>
                                         <!-- Substitua o href pelo link do GitHub Pages ou Netlify/Vercel do projeto -->
-                                        <a href="https://jhonatan-pedro.github.io/Stranger-Things/" target="_blank" class="project-link demo-link" title="Ver Demo"><i class="fas fa-external-link-alt"></i></a>
+                                        <a href="https://jhonatan-pedro.github.io/Stranger-Things/" target="_blank"
+                                            class="project-link demo-link" title="Ver Demo"><i
+                                                class="fas fa-external-link-alt"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -287,7 +325,9 @@
                                 <!-- Substitua pelo nome real do projeto -->
                                 <h3 class="project-name">Stranger Things</h3>
                                 <!-- Substitua pela descrição real do projeto -->
-                                <p class="project-description">Landing Page Temática desenvolvida durante uma semana intensiva de estudos em front-end, focado na criação de uma interface imersiva inspirada na série Stranger Things.</p>
+                                <p class="project-description">Landing Page Temática desenvolvida durante uma semana
+                                    intensiva de estudos em front-end, focado na criação de uma interface imersiva
+                                    inspirada na série Stranger Things.</p>
                             </div>
                         </div>
 
@@ -300,9 +340,13 @@
                                 <div class="project-overlay">
                                     <div class="project-links">
                                         <!-- Substitua pelo link do repositório no GitHub -->
-                                        <a href="https://github.com/Jhonatan-Pedro/Bravium-NX" target="_blank" class="project-link" title="Ver código no GitHub"><i class="fab fa-github"></i></a>
+                                        <a href="https://github.com/Jhonatan-Pedro/Bravium-NX" target="_blank"
+                                            class="project-link" title="Ver código no GitHub"><i
+                                                class="fab fa-github"></i></a>
                                         <!-- ✅ ESTE PROJETO JÁ ESTÁ HOSPEDADO — substitua pelo link real -->
-                                        <a href="https://jhonatan-pedro.github.io/Bravium-NX/" target="_blank" class="project-link demo-link" title="Ver Demo ao vivo"><i class="fas fa-external-link-alt"></i></a>
+                                        <a href="https://jhonatan-pedro.github.io/Bravium-NX/" target="_blank"
+                                            class="project-link demo-link" title="Ver Demo ao vivo"><i
+                                                class="fas fa-external-link-alt"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -315,7 +359,8 @@
                                 <!-- Substitua pelo nome real do projeto -->
                                 <h3 class="project-name">Bravium NX</h3>
                                 <!-- Substitua pela descrição real do projeto -->
-                                <p class="project-description">Landing page moderna desenvolvida para apresentação de um notebook ecológico, com foco em design, conversão e experiência do usuário.</p>
+                                <p class="project-description">Landing page moderna desenvolvida para apresentação de um
+                                    notebook ecológico, com foco em design, conversão e experiência do usuário.</p>
                             </div>
                         </div>
 
@@ -341,9 +386,9 @@
     </section>
 
 
-<hr class="section-divider">
+    <hr class="section-divider">
 
-     <!-- Services Section - COM BACKGROUND -->
+    <!-- Services Section - COM BACKGROUND -->
     <section id="services" class="services">
         <div class="section-bg">
             <img src="assets/img-videos/servicos.png" alt="" class="bg-image">
@@ -362,21 +407,24 @@
                         <i class="fas fa-code"></i>
                     </div>
                     <h3 class="service-title">Desenvolvimento Front-end</h3>
-                    <p class="service-description">Criação de interfaces modernas, responsivas e funcionais, com foco em usabilidade e organização do código.</p>
+                    <p class="service-description">Criação de interfaces modernas, responsivas e funcionais, com foco em
+                        usabilidade e organização do código.</p>
                 </div>
                 <div class="service-card gsap-fade-up">
                     <div class="service-icon">
                         <i class="fas fa-paint-brush"></i>
                     </div>
                     <h3 class="service-title">UI/UX e Design</h3>
-                    <p class="service-description">Desenvolvimento de layouts intuitivos e visualmente agradáveis, com foco na experiência do usuário e clareza na navegação.</p>
+                    <p class="service-description">Desenvolvimento de layouts intuitivos e visualmente agradáveis, com
+                        foco na experiência do usuário e clareza na navegação.</p>
                 </div>
                 <div class="service-card gsap-fade-up">
                     <div class="service-icon">
                         <i class="fas fa-rocket"></i>
                     </div>
                     <h3 class="service-title">Performance</h3>
-                    <p class="service-description">Aplicação de boas práticas para melhorar o desempenho e garantir experiências rápidas e eficientes.</p>
+                    <p class="service-description">Aplicação de boas práticas para melhorar o desempenho e garantir
+                        experiências rápidas e eficientes.</p>
                 </div>
             </div>
         </div>
@@ -485,7 +533,7 @@
         </div>
     </section>
 
-    
+
 
     <hr class="section-divider">
 
@@ -512,7 +560,7 @@
                 <!-- Container das Experiências -->
                 <div class="timeline-viewport">
                     <div class="timeline-track" id="timelineTrack">
-                        
+
                         <!-- Grupo 1: Experiências Atuais -->
                         <div class="timeline-group active" data-group="1">
                             <div class="timeline-item">
@@ -521,7 +569,9 @@
                                     <span class="timeline-date">2024 • 2026 - Presente</span>
                                     <h3 class="timeline-role">Formação em Análise e Desenvolvimento de Sistemas</h3>
                                     <p class="timeline-company">UNICEPLAC</p>
-                                    <p class="timeline-description">Formação voltada ao desenvolvimento de software, abordando fundamentos como lógica de programação, estrutura de dados e construção de sistemas, preparando para atuação no mercado de tecnologia.</p>
+                                    <p class="timeline-description">Formação voltada ao desenvolvimento de software,
+                                        abordando fundamentos como lógica de programação, estrutura de dados e
+                                        construção de sistemas, preparando para atuação no mercado de tecnologia.</p>
                                 </div>
                             </div>
 
@@ -531,7 +581,9 @@
                                     <span class="timeline-date">2026 - Presente</span>
                                     <h3 class="timeline-role">Desenvolvimento em Inglês</h3>
                                     <p class="timeline-company">Centro Interescolar de Línguas (CIL)</p>
-                                    <p class="timeline-description">Estudo contínuo da língua inglesa com foco em aprimorar a leitura de documentações técnicas, comunicação e preparação para oportunidades na área de tecnologia em nível internacional.</p>
+                                    <p class="timeline-description">Estudo contínuo da língua inglesa com foco em
+                                        aprimorar a leitura de documentações técnicas, comunicação e preparação para
+                                        oportunidades na área de tecnologia em nível internacional.</p>
                                 </div>
                             </div>
 
@@ -541,7 +593,10 @@
                                     <span class="timeline-date">2025 • 2026</span>
                                     <h3 class="timeline-role">Jovem Aprendiz - Analista de Suporte TI</h3>
                                     <p class="timeline-company">Experiência Profissional</p>
-                                    <p class="timeline-description">Atuação na área de desenvolvimento de software, com contato com rotinas do ambiente profissional, colaboração em equipe e aprendizado contínuo de tecnologias e processos de desenvolvimento, em programa de aprendizagem realizado em parceria com o SENAC DF.</p>
+                                    <p class="timeline-description">Atuação na área de desenvolvimento de software, com
+                                        contato com rotinas do ambiente profissional, colaboração em equipe e
+                                        aprendizado contínuo de tecnologias e processos de desenvolvimento, em programa
+                                        de aprendizagem realizado em parceria com o SENAC DF.</p>
                                 </div>
                             </div>
                         </div>
@@ -554,7 +609,8 @@
                                     <span class="timeline-date">2026</span>
                                     <h3 class="timeline-role">Projetos Pessoais</h3>
                                     <p class="timeline-company">Portfólio</p>
-                                    <p class="timeline-description">Desenvolvimento contínuo de projetos pessoais para aprimorar habilidades técnicas e criar um portfólio diversificado.</p>
+                                    <p class="timeline-description">Desenvolvimento contínuo de projetos pessoais para
+                                        aprimorar habilidades técnicas e criar um portfólio diversificado.</p>
                                 </div>
                             </div>
 
@@ -564,7 +620,9 @@
                                     <span class="timeline-date">2025</span>
                                     <h3 class="timeline-role">Desenvolvimento Web</h3>
                                     <p class="timeline-company">SENAC DF</p>
-                                    <p class="timeline-description">Participação no desenvolvimento de projetos web voltados à criação de interfaces responsivas, com foco em boas práticas de desenvolvimento, organização de código e trabalho em equipe.</p>
+                                    <p class="timeline-description">Participação no desenvolvimento de projetos web
+                                        voltados à criação de interfaces responsivas, com foco em boas práticas de
+                                        desenvolvimento, organização de código e trabalho em equipe.</p>
                                 </div>
                             </div>
 
@@ -633,7 +691,8 @@
                         <i class="fas fa-check-circle"></i> Mensagem recebida! Entrarei em contato assim que possível.
                     </p>
                     <p class="form-feedback form-feedback--error" id="formError">
-                        <i class="fas fa-exclamation-circle"></i> Algo deu errado. Tente novamente ou me contate pelo LinkedIn.
+                        <i class="fas fa-exclamation-circle"></i> Algo deu errado. Tente novamente ou me contate pelo
+                        LinkedIn.
                     </p>
                 </form>
             </div>
@@ -646,8 +705,10 @@
             <div class="footer-content">
                 <p class="copyright">© 2026 Jhonatan Pedro. Todos os direitos reservados.</p>
                 <div class="social-links">
-                    <a href="https://github.com/Jhonatan-Pedro" target="_blank" class="social-link gsap-magnetic"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/jhonatanpedroliradossantos/" target="_blank" class="social-link gsap-magnetic"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Jhonatan-Pedro" target="_blank" class="social-link gsap-magnetic"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/jhonatanpedroliradossantos/" target="_blank"
+                        class="social-link gsap-magnetic"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
         </div>
@@ -655,4 +716,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
