@@ -240,7 +240,7 @@ gsap.fromTo('.about-content > *',
         ease: "power3.out",
         scrollTrigger: {
             trigger: '#about',
-            start: "top 70%",
+            start: "top bottom",
             once: true
         },
         delay: 0.3
