@@ -1941,6 +1941,8 @@ hr.section-divider {
 
     .about-grid {
         gap: 3rem;
+        overflow: visible;
+        /* impede corte do botão */
     }
 
     /* Ajustar as estatísticas para não ocuparem muito espaço */
@@ -1954,6 +1956,9 @@ hr.section-divider {
     .about-content {
         overflow: visible !important;
         /* impede corte de conteúdo */
+        min-height: auto;
+        /* garante espaço para o botão */
+        padding-bottom: 1rem;
     }
 
     .stat-item {
@@ -2354,8 +2359,13 @@ hr.section-divider {
         padding: 4rem 0;
     }
 
+    .about-content {
+        overflow: visible !important;
+    }
+
     .about-grid {
         gap: 2rem;
+        overflow: visible;
     }
 
     .about-stats {
