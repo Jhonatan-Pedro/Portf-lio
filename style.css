@@ -2725,3 +2725,74 @@ html.lenis body {
     }
 
 }
+
+/* ===== CORREÇÕES EXCLUSIVAS PARA MODO PAISAGEM (HORIZONTAL) ===== */
+@media (orientation: landscape) and (max-height: 700px) {
+  /* ---- 1. Navbar em modo hambúrguer ---- */
+  .nav-links {
+    display: none !important;
+  }
+  .nav-links.active {
+    display: flex !important;
+  }
+  .mobile-menu-btn {
+    display: block !important;
+  }
+  .cta-btn {
+    display: none !important;
+  }
+
+  /* ---- 2. Seção About – botão CV sempre visível ---- */
+  .about {
+    padding: 3rem 0 !important;
+    overflow: visible !important;
+  }
+  .about-grid {
+    gap: 2rem !important;
+    overflow: visible !important;
+  }
+  .about-content {
+    overflow: visible !important;
+    min-height: auto !important;
+  }
+  .cv-download-wrapper {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    margin-top: 1rem !important;
+    position: relative !important;
+    z-index: 10 !important;
+  }
+  .cv-download-btn {
+    width: auto !important;
+    display: inline-block !important;
+    padding: 0.7rem 1.5rem !important;
+    font-size: 0.8rem !important;
+    white-space: nowrap !important;
+  }
+
+  /* ---- 3. Texto "CONTACT" reposicionado para não cortar ---- */
+  .contact-bg-text {
+    font-size: 6rem !important;
+    bottom: -2rem !important;
+    right: -1rem !important;
+  }
+
+  /* ---- 4. Ajustes de espaçamento extra para evitar overflow ---- */
+  .hero {
+    min-height: 100vh !important;
+    padding: 2rem 1rem !important;
+  }
+  .hero-title {
+    font-size: clamp(1.6rem, 6vw, 2.5rem) !important;
+  }
+  .work-title,
+  .section-title {
+    font-size: 1.8rem !important;
+  }
+  .services-grid,
+  .tech-categories {
+    gap: 1rem !important;
+  }
+}
