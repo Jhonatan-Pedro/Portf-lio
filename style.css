@@ -2760,13 +2760,13 @@ html.lenis body {
     display: none !important;
   }
 
-  /* ---- 2. Hero: scroll indicator na parte inferior, sem sobreposição ---- */
+  /* ---- 2. Hero: scroll indicator posicionado abaixo do conteúdo com espaçamento ---- */
   .hero {
     min-height: 100vh !important;
     display: flex !important;
     flex-direction: column !important;
-    justify-content: space-between !important; /* conteúdo no topo, indicador no fim */
-    padding: 3rem 1rem 2rem !important; /* reduz padding inferior, já que o indicador fica no final */
+    justify-content: center !important; /* centraliza verticalmente o conteúdo */
+    padding: 3rem 1rem !important;
   }
   .hero-content {
     margin: 0 auto !important;
@@ -2778,7 +2778,7 @@ html.lenis body {
     bottom: auto !important;
     left: auto !important;
     transform: none !important;
-    margin: 1.5rem auto 0.5rem auto !important; /* centralizado e com espaço mínimo */
+    margin: 3rem auto 0 auto !important; /* AUMENTEI para 3rem (ou mais) para dar espaço */
     text-align: center !important;
   }
 
