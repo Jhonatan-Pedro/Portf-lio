@@ -2760,25 +2760,31 @@ html.lenis body {
     display: none !important;
   }
 
-  /* ---- 2. Hero: scroll indicator não sobrepõe texto ---- */
+  /* ---- 2. Hero: scroll indicator na parte inferior, sem sobreposição ---- */
   .hero {
     min-height: 100vh !important;
-    padding: 3rem 1rem 5rem !important; /* mais espaço inferior */
-    justify-content: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important; /* conteúdo no topo, indicador no fim */
+    padding: 3rem 1rem 2rem !important; /* reduz padding inferior, já que o indicador fica no final */
   }
   .hero-content {
-    margin-bottom: 1rem !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    width: 100% !important;
   }
   .scroll-indicator {
     position: relative !important;
     bottom: auto !important;
-    margin-top: 2rem !important;
+    left: auto !important;
     transform: none !important;
+    margin: 0 auto 0.5rem auto !important; /* centralizado e com espaço mínimo */
+    text-align: center !important;
   }
 
   /* ---- 3. About: botão CV dentro da seção, sem invasão ---- */
   .about {
-    padding: 3rem 0 4rem !important; /* espaço inferior extra */
+    padding: 3rem 0 4rem !important;
     overflow: visible !important;
   }
   .about-grid {
@@ -2809,7 +2815,7 @@ html.lenis body {
     white-space: nowrap !important;
   }
 
-  /* ---- 4. Contact: texto de fundo ajustado (já resolvido, mas mantemos) ---- */
+  /* ---- 4. Contact: texto de fundo ajustado ---- */
   .contact-bg-text {
     font-size: 5rem !important;
     bottom: -1.5rem !important;
@@ -2829,6 +2835,6 @@ html.lenis body {
     gap: 1rem !important;
   }
   hr.section-divider {
-    margin: 0 auto !important; /* garante que o hr não seja empurrado */
+    margin: 0 auto !important;
   }
 }
