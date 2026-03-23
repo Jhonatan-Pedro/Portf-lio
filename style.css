@@ -2728,71 +2728,107 @@ html.lenis body {
 
 /* ===== CORREÇÕES EXCLUSIVAS PARA MODO PAISAGEM (HORIZONTAL) ===== */
 @media (orientation: landscape) and (max-height: 700px) {
-  /* ---- 1. Navbar em modo hambúrguer ---- */
+  /* ---- 1. Navbar: menu hambúrguer organizado ---- */
   .nav-links {
     display: none !important;
   }
   .nav-links.active {
     display: flex !important;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--bg-primary) !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 2rem !important;
+    z-index: 1000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .nav-links.active .nav-link {
+    font-size: 1.2rem !important;
+    padding: 0.5rem !important;
   }
   .mobile-menu-btn {
     display: block !important;
+    z-index: 1001 !important;
   }
   .cta-btn {
     display: none !important;
   }
 
-  /* ---- 2. Seção About – botão CV sempre visível ---- */
+  /* ---- 2. Hero: scroll indicator não sobrepõe texto ---- */
+  .hero {
+    min-height: 100vh !important;
+    padding: 3rem 1rem 5rem !important; /* mais espaço inferior */
+    justify-content: center !important;
+  }
+  .hero-content {
+    margin-bottom: 1rem !important;
+  }
+  .scroll-indicator {
+    position: relative !important;
+    bottom: auto !important;
+    margin-top: 2rem !important;
+    transform: none !important;
+  }
+
+  /* ---- 3. About: botão CV dentro da seção, sem invasão ---- */
   .about {
-    padding: 3rem 0 !important;
+    padding: 3rem 0 4rem !important; /* espaço inferior extra */
     overflow: visible !important;
   }
   .about-grid {
-    gap: 2rem !important;
+    gap: 1.5rem !important;
     overflow: visible !important;
   }
   .about-content {
     overflow: visible !important;
-    min-height: auto !important;
+    padding-bottom: 0 !important;
+  }
+  .about-stats {
+    margin-bottom: 1rem !important;
   }
   .cv-download-wrapper {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
-    transform: none !important;
-    margin-top: 1rem !important;
+    margin-top: 0.5rem !important;
+    margin-bottom: 0 !important;
     position: relative !important;
     z-index: 10 !important;
   }
   .cv-download-btn {
     width: auto !important;
     display: inline-block !important;
-    padding: 0.7rem 1.5rem !important;
-    font-size: 0.8rem !important;
+    padding: 0.6rem 1.2rem !important;
+    font-size: 0.75rem !important;
     white-space: nowrap !important;
   }
 
-  /* ---- 3. Texto "CONTACT" reposicionado para não cortar ---- */
+  /* ---- 4. Contact: texto de fundo ajustado (já resolvido, mas mantemos) ---- */
   .contact-bg-text {
-    font-size: 6rem !important;
-    bottom: -2rem !important;
+    font-size: 5rem !important;
+    bottom: -1.5rem !important;
     right: -1rem !important;
   }
 
-  /* ---- 4. Ajustes de espaçamento extra para evitar overflow ---- */
-  .hero {
-    min-height: 100vh !important;
-    padding: 2rem 1rem !important;
-  }
+  /* ---- 5. Ajustes gerais de espaçamento e títulos ---- */
   .hero-title {
-    font-size: clamp(1.6rem, 6vw, 2.5rem) !important;
+    font-size: clamp(1.5rem, 5vw, 2.2rem) !important;
   }
   .work-title,
   .section-title {
-    font-size: 1.8rem !important;
+    font-size: 1.6rem !important;
   }
   .services-grid,
   .tech-categories {
     gap: 1rem !important;
+  }
+  hr.section-divider {
+    margin: 0 auto !important; /* garante que o hr não seja empurrado */
   }
 }
