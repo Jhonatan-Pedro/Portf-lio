@@ -2778,7 +2778,7 @@ html.lenis body {
     bottom: auto !important;
     left: auto !important;
     transform: none !important;
-    margin: 0 auto 0.5rem auto !important; /* centralizado e com espaço mínimo */
+    margin: 1.5rem auto 0.5rem auto !important; /* centralizado e com espaço mínimo */
     text-align: center !important;
   }
 
